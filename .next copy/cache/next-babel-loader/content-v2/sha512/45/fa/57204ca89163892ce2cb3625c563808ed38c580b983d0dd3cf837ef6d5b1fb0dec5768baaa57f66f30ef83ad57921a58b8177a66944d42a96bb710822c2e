@@ -1,0 +1,1 @@
+{"ast":null,"code":"import axios from 'axios';\nvar api = axios.create({\n  baseURL: process.env.UPLOAD_FOTOS\n});\nexport default api;","map":null,"metadata":{},"sourceType":"module"}

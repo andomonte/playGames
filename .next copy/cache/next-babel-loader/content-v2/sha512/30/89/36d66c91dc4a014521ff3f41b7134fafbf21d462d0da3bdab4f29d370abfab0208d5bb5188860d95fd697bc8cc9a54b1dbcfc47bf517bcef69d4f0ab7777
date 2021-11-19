@@ -1,0 +1,1 @@
+{"ast":null,"code":"import { useRouter } from 'next/router';\nexport default function callbackGoogle() {\n  const router = useRouter();\n  return router.push(`${window.location.origin}/pefil`);\n}","map":null,"metadata":{},"sourceType":"module"}

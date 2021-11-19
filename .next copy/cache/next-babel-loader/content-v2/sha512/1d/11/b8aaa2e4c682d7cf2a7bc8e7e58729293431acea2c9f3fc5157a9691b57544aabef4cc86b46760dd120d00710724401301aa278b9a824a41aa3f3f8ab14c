@@ -1,0 +1,1 @@
+{"ast":null,"code":"import prisma from 'src/lib/prisma';\nexport default async function handle(req, res) {\n  const posts = await prisma.Usuarios.findMany();\n  res.statuCode = 200;\n  res.setHeader('Content-Type', 'aplication/json'); //  res.end(JSON.stringify({ posts }));\n\n  res.json(posts);\n}","map":null,"metadata":{},"sourceType":"module"}

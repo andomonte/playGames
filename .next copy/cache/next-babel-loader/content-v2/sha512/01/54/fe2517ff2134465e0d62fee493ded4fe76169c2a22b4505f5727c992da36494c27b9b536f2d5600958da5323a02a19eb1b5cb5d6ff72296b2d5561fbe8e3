@@ -1,0 +1,1 @@
+{"ast":null,"code":"import { jsx as _jsx } from \"react/jsx-runtime\";\nimport React from 'react';\nimport { Layout } from 'src/components/Layout';\n\nfunction Missoes() {\n  return /*#__PURE__*/_jsx(Layout, {\n    title: \"SISTEMA-IDPB\"\n  });\n}\n\nexport var __N_SSG = true;\nexport default Missoes;","map":null,"metadata":{},"sourceType":"module"}
