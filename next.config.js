@@ -28,7 +28,7 @@ module.exports = withPlugins([
   withImages,
   nextConfig,
   {
-    webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) =>
+    webpack: (config) =>
       // Important: return the modified config
       config,
     /*     webpack: (config, { isServer }) => {
