@@ -28,7 +28,7 @@ function EsperaGame({ RespostaMesa }) {
               <CardMedia
                 component="img"
                 height="325"
-                image="/images/gamer/resposta.png"
+                image="/images/gamer/gabi02.jpeg"
                 alt="green iguana"
                 style={{ borderRadius: 16 }}
               />

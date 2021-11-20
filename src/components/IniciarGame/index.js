@@ -66,7 +66,7 @@ function InicioGame() {
                   <CardMedia
                     component="img"
                     height="325"
-                    image="/images/gamer/gabri.png"
+                    image="/images/gamer/gabi01.jpeg"
                     alt="green iguana"
                     style={{ borderRadius: 16 }}
                   />

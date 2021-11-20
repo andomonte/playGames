@@ -89,7 +89,7 @@ function LoginGame() {
                       <Avatar
                         sx={{ width: 106, height: 106 }}
                         alt="Remy Sharp"
-                        src="https://sistemaidpb.s3.amazonaws.com/FOTO+(3).jpg"
+                        src="/images/gamer/avatarGabi.jpeg"
                       />
                     </Box>
                     <Box mt={3} ml={2} sx={{ fontSize: 'bold' }}>
