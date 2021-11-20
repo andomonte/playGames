@@ -17,7 +17,7 @@ const defaultProps = {
   width: '95%',
 };
 
-export default function TelaGame04({ mesa, codigoMesa, perguntas }) {
+export default function TelaGame09({ mesa, codigoMesa, perguntas }) {
   // const classes = useStyles();
   const [colorA, setColorA] = React.useState('#fff');
   const [colorB, setColorB] = React.useState('#fff');
@@ -42,12 +42,12 @@ export default function TelaGame04({ mesa, codigoMesa, perguntas }) {
     if (data) {
       const dadosMesa = data.filter((val) => val.codigo === Number(codigo));
       if (dadosMesa) {
-        //        RespostaMesa = dadosMesa[0].resposta1;
+        //        RespostaMesa = dadosMesa[0].resposta9;
         PontosMesa = dadosMesa[0].pontos;
         //    StatusMesa = dadosMesa[0].status;
         setStatusMesa(dadosMesa[0].status);
-        setRespostaMesa(dadosMesa[0].resposta4);
-        setResposta(dadosMesa[0].resposta4);
+        setRespostaMesa(dadosMesa[0].resposta9);
+        setResposta(dadosMesa[0].resposta9);
       }
     }
     //     mutate(["/api/albums/list?id=", appUser.id]);
@@ -72,7 +72,7 @@ export default function TelaGame04({ mesa, codigoMesa, perguntas }) {
   const submitData = async (valor) => {
     try {
       const body = {
-        resposta4: valor,
+        resposta9: valor,
       };
 
       let urlCreate = '';
@@ -94,7 +94,7 @@ export default function TelaGame04({ mesa, codigoMesa, perguntas }) {
     //  } // else //setLoading('naoPreenchido');
   };
   const confirmar = (valor) => {
-    if (valor === perguntas[3].gabarito) {
+    if (valor === perguntas[8].gabarito) {
       PontosMesa = Number(PontosMesa) + 10;
       submitData(valor);
     } else {
@@ -126,7 +126,7 @@ export default function TelaGame04({ mesa, codigoMesa, perguntas }) {
       <TelaGame02 mesa={mesa} codigoMesa={codigoMesa} perguntas={perguntas} />
     );
   }
- */ if (RespostaMesa !== '0' && statusMesa === 'ON-4') {
+ */ if (RespostaMesa !== '0' && statusMesa === 'ON-9') {
     return <TelaEspera RespostaMesa={RespostaMesa} />;
   }
   if (esperar === true) {
@@ -162,7 +162,7 @@ export default function TelaGame04({ mesa, codigoMesa, perguntas }) {
               <Box borderRadius={16} {...defaultProps}>
                 <Box width="100%">
                   <h3>
-                    <strong>{perguntas[3].Pergunta}</strong>{' '}
+                    <strong>{perguntas[8].Pergunta}</strong>{' '}
                   </h3>
                 </Box>
               </Box>
@@ -180,7 +180,7 @@ export default function TelaGame04({ mesa, codigoMesa, perguntas }) {
                   <img width={40} src="/images/gamer/letra A.png" alt="onde" />
                 </Box>
                 <Box>
-                  <strong>{perguntas[3].LetraA}</strong>
+                  <strong>{perguntas[8].LetraA}</strong>
                 </Box>
               </Box>
             </Grid>
@@ -196,7 +196,7 @@ export default function TelaGame04({ mesa, codigoMesa, perguntas }) {
                   <img width={34} src="/images/gamer/letra B.png" alt="onde" />
                 </Box>{' '}
                 <Box>
-                  <strong>{perguntas[3].LetraB}</strong>
+                  <strong>{perguntas[8].LetraB}</strong>
                 </Box>
               </Box>
             </Grid>
@@ -213,7 +213,7 @@ export default function TelaGame04({ mesa, codigoMesa, perguntas }) {
                   <img width={31} src="/images/gamer/letra C.png" alt="onde" />
                 </Box>
                 <Box>
-                  <strong>{perguntas[3].LetraC}</strong>
+                  <strong>{perguntas[8].LetraC}</strong>
                 </Box>
               </Box>
             </Grid>
@@ -228,7 +228,7 @@ export default function TelaGame04({ mesa, codigoMesa, perguntas }) {
                   <img width={32} src="/images/gamer/letra D.png" alt="onde" />
                 </Box>{' '}
                 <Box>
-                  <strong>{perguntas[3].LetraD}</strong>
+                  <strong>{perguntas[8].LetraD}</strong>
                 </Box>
               </Box>
             </Grid>

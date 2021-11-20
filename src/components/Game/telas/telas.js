@@ -6,6 +6,12 @@ import TelaGame01 from './telaGame01';
 import TelaGame02 from './telaGame02';
 import TelaGame03 from './telaGame03';
 import TelaGame04 from './telaGame04';
+import TelaGame05 from './telaGame05';
+import TelaGame06 from './telaGame06';
+import TelaGame07 from './telaGame07';
+import TelaGame08 from './telaGame08';
+import TelaGame09 from './telaGame09';
+import TelaGame10 from './telaGame10';
 
 const fetcher = (url) => axios.get(url).then((res) => res.data);
 
@@ -58,5 +64,36 @@ export default function Telas({ mesa, codigoMesa, perguntas }) {
       <TelaGame04 mesa={mesa} codigoMesa={codigoMesa} perguntas={perguntas} />
     );
   }
+  if (statusMesa === 'ON-5') {
+    return (
+      <TelaGame05 mesa={mesa} codigoMesa={codigoMesa} perguntas={perguntas} />
+    );
+  }
+  if (statusMesa === 'ON-6') {
+    return (
+      <TelaGame06 mesa={mesa} codigoMesa={codigoMesa} perguntas={perguntas} />
+    );
+  }
+  if (statusMesa === 'ON-7') {
+    return (
+      <TelaGame07 mesa={mesa} codigoMesa={codigoMesa} perguntas={perguntas} />
+    );
+  }
+  if (statusMesa === 'ON-8') {
+    return (
+      <TelaGame08 mesa={mesa} codigoMesa={codigoMesa} perguntas={perguntas} />
+    );
+  }
+  if (statusMesa === 'ON-9') {
+    return (
+      <TelaGame09 mesa={mesa} codigoMesa={codigoMesa} perguntas={perguntas} />
+    );
+  }
+  if (statusMesa === 'ON-10') {
+    return (
+      <TelaGame10 mesa={mesa} codigoMesa={codigoMesa} perguntas={perguntas} />
+    );
+  }
+
   return 'Carregando...';
 }

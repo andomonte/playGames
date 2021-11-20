@@ -65,7 +65,7 @@ export default function TelaGame01({ mesa, codigoMesa, perguntas }) {
     return 0;
   }, [data]);
   mutate('/api/consultaGames');
-  console.log(RespostaMesa, resposta);
+  // console.log(RespostaMesa, resposta);
   const submitData = async (valor) => {
     try {
       const body = {

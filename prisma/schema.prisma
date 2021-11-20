@@ -461,14 +461,20 @@ model celulas_MM {
 }
 
 model games {
-  Mesa      String? @db.VarChar(45)
-  codigo    Int     @id
-  resposta1 String? @db.VarChar(45)
-  resposta2 String? @db.VarChar(45)
-  resposta3 String? @db.VarChar(45)
-  resposta4 String? @db.VarChar(45)
-  status    String? @db.VarChar(45)
-  pontos    String? @db.VarChar(45)
+  Mesa       String? @db.VarChar(45)
+  codigo     Int     @id
+  resposta1  String? @default("0") @db.VarChar(45)
+  resposta2  String? @default("0") @db.VarChar(45)
+  resposta3  String? @default("0") @db.VarChar(45)
+  resposta4  String? @default("0") @db.VarChar(45)
+  resposta5  String? @default("0") @db.VarChar(45)
+  resposta6  String? @default("0") @db.VarChar(45)
+  resposta7  String? @default("0") @db.VarChar(45)
+  resposta8  String? @default("0") @db.VarChar(45)
+  resposta9  String? @default("0") @db.VarChar(45)
+  resposta10 String? @default("0") @db.VarChar(45)
+  status     String? @default("OFF") @db.VarChar(45)
+  pontos     String? @default("0") @db.VarChar(45)
 }
 
 model MinistrosIDPBAMs {

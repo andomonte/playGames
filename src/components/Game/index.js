@@ -5,7 +5,7 @@ import Avatar from '@mui/material/Avatar';
 import useSWR, { mutate } from 'swr';
 import axios from 'axios';
 import { useRouter } from 'next/router';
-import TelaGame01 from './telas/telaGame01';
+import TelaGame01 from './telas/telas';
 import TelaGame02 from './telas/telaGame02';
 import TelaGame03 from './telas/telaGame03';
 import TelaGame04 from './telas/telaGame04';

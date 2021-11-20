@@ -126,10 +126,7 @@ export default function TelaGame01({ mesa, codigoMesa, perguntas }) {
       <TelaGame02 mesa={mesa} codigoMesa={codigoMesa} perguntas={perguntas} />
     );
   }
- */ if (
-    RespostaMesa !== '0' &&
-    statusMesa === 'ON-1'
-  ) {
+ */ if (RespostaMesa !== '0' && statusMesa === 'ON-1') {
     return <TelaEspera RespostaMesa={RespostaMesa} />;
   }
   if (esperar === true) {

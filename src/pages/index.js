@@ -2,15 +2,9 @@ import React from 'react';
 import LoginGame from 'src/components/LoginGame/index';
 import prisma from 'src/lib/prisma';
 import InicioGame from 'src/components/IniciarGame';
-import { Box, Grid } from '@material-ui/core';
-import CardMedia from '@mui/material/CardMedia';
+// import { Box, Grid } from '@material-ui/core';
+// import CardMedia from '@mui/material/CardMedia';
 // import Avatar from '@mui/material/Avatar';
-const defaultProps = {
-  bgcolor: 'background.paper',
-  m: 1,
-  border: 1,
-  width: '95%',
-};
 function Home({ games }) {
   console.log(games[0].status);
   switch (games[0].status) {
@@ -21,7 +15,9 @@ function Home({ games }) {
 
     default:
       return (
-        <Box
+        <LoginGame title="Niver Gabrielle" />
+
+        /*         <Box
           bgcolor="#fce4ec"
           display="flex"
           flexDirection="row"
@@ -51,6 +47,7 @@ function Home({ games }) {
             </Box>
           </Box>
         </Box>
+ */
       );
   }
   //  return <LoginGame title="Niver Gabrielle" />;

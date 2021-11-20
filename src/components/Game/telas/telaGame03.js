@@ -43,8 +43,8 @@ export default function TelaGame01({ mesa, codigoMesa, perguntas }) {
         PontosMesa = dadosMesa[0].pontos;
         //    StatusMesa = dadosMesa[0].status;
         setStatusMesa(dadosMesa[0].status);
-        setRespostaMesa(dadosMesa[0].resposta2);
-        setResposta(dadosMesa[0].resposta2);
+        setRespostaMesa(dadosMesa[0].resposta3);
+        setResposta(dadosMesa[0].resposta3);
         //        //(dadosMesa, StatusMesa);
       }
     }
@@ -65,12 +65,10 @@ export default function TelaGame01({ mesa, codigoMesa, perguntas }) {
     return 0;
   }, [data]);
   mutate('/api/consultaGames');
-  console.log(RespostaMesa, resposta);
   const submitData = async (valor) => {
     try {
       const body = {
-        resposta2: valor,
-        pontos: String(PontosMesa),
+        resposta3: valor,
       };
 
       let urlCreate = '';
@@ -117,7 +115,7 @@ export default function TelaGame01({ mesa, codigoMesa, perguntas }) {
     } else setColorD('#fff');
   };
   // ('st:', statusMesa, RespostaMesa);
-  if (RespostaMesa !== '0' && statusMesa === 'ON-2') {
+  if (RespostaMesa !== '0' && statusMesa === 'ON-3') {
     return <TelaEspera RespostaMesa={RespostaMesa} />;
   }
   if (esperar === true) {
@@ -126,8 +124,6 @@ export default function TelaGame01({ mesa, codigoMesa, perguntas }) {
 
   return (
     <>
-      {console.log(esperar)}
-
       <Box
         bgcolor="#fce4ec"
         display="flex"
@@ -230,7 +226,6 @@ export default function TelaGame01({ mesa, codigoMesa, perguntas }) {
       </Box>
       <Box mt={-10} display="flex" align="center" justifyContent="center">
         <Box sx={{ '& > :not(style)': { m: 1 } }} mb={0}>
-          {console.log(resposta)}
           {RespostaMesa === '0' &&
             (resposta === '0' ? (
               <Fab
