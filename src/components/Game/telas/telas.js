@@ -27,10 +27,12 @@ export default function Telas({ mesa, codigoMesa, perguntas }) {
 
   React.useEffect(() => {
     if (data) {
+      setStatusMesa(data[0].status);
+
       const dadosMesa = data.filter((val) => val.codigo === Number(codigo));
       if (dadosMesa) {
         //        RespostaMesa = dadosMesa[0].resposta1;
-        setStatusMesa(dadosMesa[0].status);
+        //  setStatusMesa(dadosMesa[0].status);
       }
     }
     //     mutate(["/api/albums/list?id=", appUser.id]);
@@ -42,7 +44,7 @@ export default function Telas({ mesa, codigoMesa, perguntas }) {
 
   mutate(url);
 
-  //  console.log('st:', statusMesa, RespostaMesa);
+  console.log('st:', statusMesa);
 
   if (statusMesa === 'ON-1') {
     return (
