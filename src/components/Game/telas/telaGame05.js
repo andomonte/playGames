@@ -41,6 +41,7 @@ export default function TelaGame05({ mesa, codigoMesa, perguntas }) {
   React.useEffect(() => {
     if (data) {
       const dadosMesa = data.filter((val) => val.codigo === Number(codigo));
+      console.log('dadosMesa:', dadosMesa);
       if (dadosMesa) {
         //        RespostaMesa = dadosMesa[0].resposta5;
         PontosMesa = dadosMesa[0].pontos;
