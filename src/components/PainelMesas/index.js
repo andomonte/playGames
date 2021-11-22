@@ -24,7 +24,8 @@ function PainelMesas({ perguntasGame }) {
   if (!data) return <div>Loading ...</div>;
 
   const submitData = async (valor) => {
-    const statusValor = `ON-${valor}`;
+    let statusValor = `ON-${valor}`;
+    if (valor === 0) statusValor = 'OFF';
     console.log(statusValor);
     try {
       const body = {
@@ -48,13 +49,13 @@ function PainelMesas({ perguntasGame }) {
   mutate('/api/consultaGames');
   const handleSubMes = () => {
     let temCont = contMes - 1;
-    if (temCont < 1) temCont = 10;
+    if (temCont < 0) temCont = 10;
     setContMes(temCont);
     submitData(temCont);
   };
   const handleAddMes = () => {
     let temCont = contMes + 1;
-    if (temCont > 10) temCont = 1;
+    if (temCont > 10) temCont = 0;
     setContMes(temCont);
     submitData(temCont);
   };
@@ -487,7 +488,11 @@ function PainelMesas({ perguntasGame }) {
             ml={72}
             style={{ fontSize: '34px', color: '#10aa', fontWeight: 'bold' }}
           >
-            <strong>{perguntasGame[contMes - 1].Pergunta}</strong>
+            {perguntasGame > 0 ? (
+              <strong>{perguntasGame[contMes - 1].Pergunta}</strong>
+            ) : (
+              <strong>Esperando o Início do Jogo</strong>
+            )}
           </Box>
         </Grid>
       </Box>

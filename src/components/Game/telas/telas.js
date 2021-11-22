@@ -2,6 +2,7 @@ import React from 'react';
 // import CardMedia from '@mui/material/CardMedia';
 import useSWR, { mutate } from 'swr';
 import axios from 'axios';
+import InicioGame from 'src/components/IniciarGame';
 import TelaGame01 from './telaGame01';
 import TelaGame02 from './telaGame02';
 import TelaGame03 from './telaGame03';
@@ -95,5 +96,5 @@ export default function Telas({ mesa, codigoMesa, perguntas }) {
     );
   }
 
-  return 'Carregando...';
+  return <InicioGame title="Niver Gabrielle" />;
 }
