@@ -2,7 +2,7 @@ import prisma from 'src/lib/prisma';
 
 export default async function handle(req, res) {
   // id = req;
-  console.log('dados do api');
+  // console.log('dados do api');
   const posts = await prisma.games.findMany().finally(async () => {
     await prisma.$disconnect();
   });
