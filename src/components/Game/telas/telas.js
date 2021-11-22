@@ -44,8 +44,6 @@ export default function Telas({ mesa, codigoMesa, perguntas }) {
 
   mutate(url);
 
-  console.log('st:', statusMesa);
-
   if (statusMesa === 'ON-1') {
     return (
       <TelaGame01 mesa={mesa} codigoMesa={codigoMesa} perguntas={perguntas} />
