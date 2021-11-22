@@ -488,7 +488,7 @@ function PainelMesas({ perguntasGame }) {
             ml={72}
             style={{ fontSize: '34px', color: '#10aa', fontWeight: 'bold' }}
           >
-            {perguntasGame > 0 ? (
+            {contMes > 0 ? (
               <strong>{perguntasGame[contMes - 1].Pergunta}</strong>
             ) : (
               <strong>Esperando o Início do Jogo</strong>

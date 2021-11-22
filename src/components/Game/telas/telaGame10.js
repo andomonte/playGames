@@ -46,8 +46,8 @@ export default function TelaGame10({ mesa, codigoMesa, perguntas }) {
         PontosMesa = dadosMesa[0].pontos;
         //    StatusMesa = dadosMesa[0].status;
         setStatusMesa(dadosMesa[0].status);
-        setRespostaMesa(dadosMesa[0].resposta100);
-        setResposta(dadosMesa[0].resposta100);
+        setRespostaMesa(dadosMesa[0].resposta10);
+        setResposta(dadosMesa[0].resposta10);
       }
     }
     //     mutate(["/api/albums/list?id=", appUser.id]);
