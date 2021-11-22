@@ -129,7 +129,7 @@ export default function TelaGame05({ mesa, codigoMesa, perguntas }) {
   }
   
  */
-  console.log('valor da RespostaMesa=', RespostaMesa);
+  console.log('RespostaMesa=', RespostaMesa);
   if (RespostaMesa !== '0' && statusMesa === 'ON-5') {
     return <TelaEspera RespostaMesa={RespostaMesa} />;
   }
